@@ -1,0 +1,18 @@
+Imagine a shoe factory and an assembler that tallies the number of pairs that correctly passes through the conveyor. 
+A pair is counted whenever a left or a right shoe is immediately followed by its opposite pair.
+However, a "double-left" or "double-right" is counted differently. 
+Any correct pairs where a double happens are not counted until the double of the opposite pair comes out. 
+Same goes for triples, quadruples, etc. All of them are just counted as 1 pair.
+
+Objective:
+Write code that takes a string input (e.g. LRLRLRLR) and outputs the number of pairs in that string.
+
+Assumptions:
+A shoe will always have a pair, i.e. the string is always on even length.
+Order does not matter: ('RL') and ('LR') counts as one.
+
+Examples:
+'LRRLRLLR' - outputs 4 (LR, RL, RL, LR)
+'LLLRRRRL' - outputs 2 (LLLRRR, RL)
+'LLRRLLRR' - outputs 2 (LLRR, LLRR)
+'LLLLRRRR' - outputs 1 (LLLLRRRR)
